@@ -1,0 +1,11 @@
+.input-container {
+    display: flex;
+}
+
+body {
+    height: 100vh;
+}
+
+#dropdownMenuButton {
+    margin-bottom: 1rem;
+}

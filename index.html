@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap Framework-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--Favicon-->
+    <link rel="icon" href="money.png">
+    <!--Link to stylesheet-->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Split the Bill</title>
+</head>
+
+<body>
+
+
+    <!--Container for Bill Calculation Element-->
+    <div class="container my-4">
+        <!--Centering the text-->
+        <div class="card text-center">
+            <div class="card-header">
+                <h2 class="card-title"> Split the Bill Calculator</h2>
+            </div>
+            <div class="card-body">
+
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Number of People</span>
+
+                    </div>
+                    <!--Input for number of people-->
+                    <input type="number" class="form-control" id="number-of-people" aria-label="Number of People">
+
+                </div>
+
+
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Bill Total</span>
+                        <span class="input-group-text">€</span>
+                    </div>
+                    <!--Input for bill total-->
+                    <input type="number" class="form-control" id="bill-amount" aria-label="Total Bill Amount">
+                </div>
+
+
+                <div class="form-check d-flex justify-content-start">
+                    <!--Checkbox for dinner category-->
+                    <input type="checkbox" class="form-check-input" id="dinner-checkbox">
+                    <label class="form-check-label" for="dinner-checkbox">Dinner</label>
+                </div>
+                <div class="form-check d-flex justify-content-start">
+                    <!--Checkbox for drinks category-->
+                    <input type="checkbox" class="form-check-input" id="drinks-checkbox">
+                    <label class="form-check-label" for="drinks-checkbox">Drinks</label>
+                </div>
+                <div class="form-check d-flex justify-content-start">
+                    <!--Checkbox for cinema category-->
+                    <input type="checkbox" class="form-check-input" id="cinema-checkbox">
+                    <label class="form-check-label" for="cinema-checkbox">Cinema</label>
+                </div>
+                <div class="form-check d-flex justify-content-start">
+                    <!--Checkbox for other category-->
+                    <input type="checkbox" class="form-check-input" id="other-checkbox">
+                    <label class="form-check-label" for="other-checkbox">Other</label>
+                </div>
+
+
+
+                <!--Button used to calculate cost per person (click eventListener added in script.js) -->
+                <button id="calculate" class="btn btn-primary">Calculate!</button>
+            </div>
+
+        </div>
+
+        <!--Segment that is displayed after bill has been calculated-->
+        <div class="alert alert-success" role="alert" id="result">
+            <h4 class="alert-heading text-center">Bill Per Person</h4>
+            <p id="bill-amount-per-person" class="text-center"></p>
+
+
+        </div>
+
+    </div>
+
+    <!--Container for individual spend by category-->
+    <div class="container my-4">
+        <h3 class="text-center">Total Individual Spend (Per Category)</h3>
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Dinner
+                <span class="badge badge-primary badge-pill" id="dinner-totalSpend">0</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Drinks
+                <span class="badge badge-primary badge-pill" id="drinks-totalSpend">0</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Cinema
+                <span class="badge badge-primary badge-pill" id="cinema-totalSpend">0</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Other
+                <span class="badge badge-primary badge-pill" id="other-totalSpend">0</span>
+            </li>
+        </ul>
+    </div>
+
+    <!--script.js file-->
+    <script src="script.js"></script>
+    <!--bootstrap and jquery libraries-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
